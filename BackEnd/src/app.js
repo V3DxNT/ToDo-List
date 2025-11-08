@@ -18,10 +18,14 @@ app.use("/api/todo", require('./routes/todo.routes'));
 
 connectDB()
 .then(() => {
-    app.listen(process.env.PORT, () => {
-        console.log(`Server is running on port ${process.env.PORT || 7777}`);
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
     });
 })
 .catch((err) => {
-    console.log('Failed to connect to the database');
+    console.log('Failed to connect to the database & Cannot start server:', err.message);
 });
+
+
+// Try Adding Helmet and Rate Limiter and Middleware for Error Handling
+// Also can use Validation Libraries like Joi or express-validator

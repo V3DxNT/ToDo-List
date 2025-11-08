@@ -23,7 +23,7 @@ todoRoute.delete("/delete/:id",deleteTodo);
 
 
 todoRoute.use("/",(req,res)=>{
-  res.send("Todo API is running and 'healthy");
+  res.send("Todo API is running and healthy");
 
 });
 
