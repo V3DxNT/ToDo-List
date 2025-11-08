@@ -13,3 +13,8 @@ const todoSchema = new mongoose.Schema({
 
 
 },{timestamps:true});
+
+
+const TodoModel= mongoose.model('Todo', todoSchema);
+
+module.exports = TodoModel; 
